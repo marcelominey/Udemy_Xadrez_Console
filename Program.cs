@@ -12,8 +12,13 @@ namespace Udemy_Xadrez_Console
             Console.WriteLine("Posição " + P);
             Console.ReadLine();
 
-
             Tabuleiro tab = new Tabuleiro(4, 5);
+
+            Tela.imprimirTabuleiro(tab);
+
+            
+
+            Console.WriteLine();
         }
     }
 }
