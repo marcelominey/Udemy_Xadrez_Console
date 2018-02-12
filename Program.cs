@@ -10,11 +10,10 @@ namespace Udemy_Xadrez_Console
         {
             try
             {
-                Posicao P;
+                PosicaoXadrez pos = new PosicaoXadrez('a',1);
+                Console.WriteLine(pos);
 
-                P = new Posicao(3, 4);
-                Console.WriteLine("Posição " + P);
-                Console.ReadLine();
+                Console.WriteLine(pos.toPosicao());
 
                 Tabuleiro tab = new Tabuleiro(8, 8);
 
