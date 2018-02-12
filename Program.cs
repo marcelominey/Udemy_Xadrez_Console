@@ -1,4 +1,6 @@
 ﻿using System;
+using ClassesTabuleiro;
+using xadrez;
 
 namespace Udemy_Xadrez_Console
 {
@@ -6,19 +8,27 @@ namespace Udemy_Xadrez_Console
     {
         static void Main(string[] args)
         {
-            Posicao P;
+            try
+            {
+                Posicao P;
 
-            P = new Posicao(3, 4);
-            Console.WriteLine("Posição " + P);
-            Console.ReadLine();
+                P = new Posicao(3, 4);
+                Console.WriteLine("Posição " + P);
+                Console.ReadLine();
 
-            Tabuleiro tab = new Tabuleiro(4, 5);
+                Tabuleiro tab = new Tabuleiro(8, 8);
 
-            Tela.imprimirTabuleiro(tab);
+                tab.colocarPeca(new Peao(tab, Cor.Preta), new Posicao(0, 0));
+                tab.colocarPeca(new Peao(tab, Cor.Preta), new Posicao(1, 3));
+                tab.colocarPeca(new Peao(tab, Cor.Preta), new Posicao(0, 2));
 
-            
+                Tela.imprimirTabuleiro(tab);
 
-            Console.WriteLine();
+                Console.WriteLine();
+            }
+            catch(TabuleiroException e){
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

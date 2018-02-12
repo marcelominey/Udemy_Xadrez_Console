@@ -10,12 +10,13 @@ namespace Udemy_Xadrez_Console
         //pode ser acessada por outras classes, mas só pode ser alterada por ela mesma e subclasses
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posicao, Tabuleiro tab, Cor cor){
+        public Peca(Tabuleiro tab, Cor cor){
         //esse construtor vai receber só um tabuleiro, uma posição e uma cor.
-            this.posicao = posicao;
+            this.posicao = null;
             this.cor = cor;
             this.tab = tab;
             this.qteMovimentos = 0;
         }
+        //public static void Torre()
     }
 }
